@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Deleting old node_modules"
 cd /var/www/frontend
-rm -r *
+rm -rf *
