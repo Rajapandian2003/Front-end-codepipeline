@@ -1,5 +1,3 @@
 #!/bin/bash
-echo "Deleting old node_modules"
-cd /var/www/frontend
-rm -rf *
-rm -rf .*
+echo "Stopping old container"
+docker rm -f reactcontainer
