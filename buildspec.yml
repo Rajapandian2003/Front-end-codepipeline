@@ -6,6 +6,7 @@ phases:
       - docker build -t reactimage .
       - docker tag reactimage:latest 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
       - docker images
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 977527528431.dkr.ecr.ap-south-1.amazonaws.com
       - docker push 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
   build:
     commands:
