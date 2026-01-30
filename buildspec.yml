@@ -1,13 +1,12 @@
 version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-      nodejs: 20             # Specifies the Node.js runtime version
+phases:     
   pre_build:
     commands:
-      - npm install --legacy-peer-deps
-      - npm run build # Forces npm to install the packages
+      - docker build -t reactimage .
+      - docker tag reactimage:latest 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
+      - docker images
+      - docker push docker push 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
   build:
     commands:
 artifacts:
