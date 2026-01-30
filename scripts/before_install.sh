@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "Stopping old container"
 docker rm -f reactcontainer
-cd /home/ubuntu/backend
+cd /var/www/frontend
 rm -rf *
