@@ -6,7 +6,7 @@ phases:
       - docker build -t reactimage .
       - docker tag reactimage:latest 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
       - docker images
-      - docker push docker push 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
+      - docker push 977527528431.dkr.ecr.ap-south-1.amazonaws.com/frontend:latest
   build:
     commands:
 artifacts:
